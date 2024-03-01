@@ -3,6 +3,8 @@ const linkItems = document.querySelectorAll(".link-item");
 const darkMode = document.querySelector(".dark-mode");
 const logo = document.querySelector(".logo svg");
 
+
+
 //Container Hover
 container.addEventListener("mouseenter", () => {
   container.classList.add("active");
@@ -52,12 +54,15 @@ darkMode.addEventListener("click", function () {
   if (document.body.classList.contains("dark-mode")) {
     darkMode.querySelector("span").textContent = "dark mode";
     darkMode.querySelector("ion-icon").setAttribute("name", "moon-outline");
-
     logo.style.fill = "#363b46";
+    localStorage.setItem("mode", "dark-mode");
+
   } else {
     darkMode.querySelector("span").textContent = "light mode";
     darkMode.querySelector("ion-icon").setAttribute("name", "sunny-outline");
     logo.style.fill = "#fff";
+    localStorage.setItem("mode", "light-mode");
   }
   document.body.classList.toggle("dark-mode");
+
 });

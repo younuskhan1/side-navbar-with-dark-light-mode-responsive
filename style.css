@@ -16,7 +16,8 @@ body.dark-mode {
   --light-text-clr: #fff;
   --hover-clr: #31313f;
 }
-* {
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
