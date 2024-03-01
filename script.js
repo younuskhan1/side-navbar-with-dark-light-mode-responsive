@@ -14,6 +14,8 @@ container.addEventListener("mouseleave", () => {
 });
 
 //Link-items Clicked
+// Basically the below codes show the active button 
+
 for (let i = 0; i < linkItems.length; i++) {
   if (!linkItems[i].classList.contains("dark-mode")) {
     linkItems[i].addEventListener("click", () => {
@@ -23,6 +25,8 @@ for (let i = 0; i < linkItems.length; i++) {
         linkItem.classList.remove("active");
       });
        //after removing, newly added active class to the newly clicked element
+       // Here the targeted element is caught and added active class by for looping 
+       // index number.    
       linkItems[i].classList.add("active");
     });
   }
