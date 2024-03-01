@@ -16,14 +16,32 @@ container.addEventListener("mouseleave", () => {
 //Link-items Clicked
 for (let i = 0; i < linkItems.length; i++) {
   if (!linkItems[i].classList.contains("dark-mode")) {
-    linkItems[i].addEventListener("click", (e) => {
+    linkItems[i].addEventListener("click", () => {
       linkItems.forEach((linkItem) => {
+        // removing the previously added or by default added active class from 
+        // previously clicked element. 
         linkItem.classList.remove("active");
       });
+       //after removing, newly added active class to the newly clicked element
       linkItems[i].classList.add("active");
     });
   }
 }
+
+
+//  I have stored the below commented codes for future using to show that 
+//  which button is active among many buttons. 
+
+// for (let i = 0; i < linkItems.length; i++) {
+//     linkItems[i].addEventListener("click", () => {
+//       linkItems.forEach((linkItem) => {
+//         linkItem.classList.remove("active");
+//       });
+//       linkItems[i].classList.add("active");
+//     });
+// }
+
+
 
 // Dark Mode Functionality
 darkMode.addEventListener("click", function () {
